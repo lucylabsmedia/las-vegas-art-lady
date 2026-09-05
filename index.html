@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lindsey McConnell | Las Vegas Fine Art & Original Contemporary Works</title>
+  <meta name="description" content="Original contemporary fine art, textured canvas pieces, and bespoke collector commissions by Las Vegas artist Lindsey McConnell." />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Lindsey McConnell | Las Vegas Fine Artist" />
+  <meta property="og:description" content="Original vibrant fine art, textured canvas pieces, and custom bespoke commissions." />
+  <meta property="og:image" content="assets/hero-featured.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Accessible Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Landmark with Sticky Navigation -->
+  <header class="navbar" role="banner">
+    <a href="#" class="brand" aria-label="Lindsey McConnell - Return to home">LINDSEY McCONNELL</a>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <ul>
+        <li><a href="#gallery">Collection</a></li>
+        <li><a href="#commissions">Commissions</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn-nav">Inquire / Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Landmark -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <p class="eyebrow">Las Vegas, NV • Contemporary Fine Art</p>
+        <h1 id="hero-heading">Original Art Rooted in Story, Color, and Atmosphere.</h1>
+        <p>Bringing spaces alive through bespoke canvas paintings, limited collections, and custom collector commissions.</p>
+        <div class="hero-actions">
+          <a href="#gallery" class="btn primary">View Latest Works</a>
+          <a href="#commissions" class="btn secondary">Commission a Piece</a>
+        </div>
+      </div>
+      <div class="hero-media">
+  <img 
+    src="assets/hero-featured.jpg" 
+    alt="Portrait of Las Vegas artist Lindsey McConnell with violet hair wearing an evil eye necklace" 
+    loading="eager" 
+  />
+</div>
+    </section>
+
+    <!-- Social Proof & Guarantees Bar -->
+    <section class="proof-bar" aria-label="Key Services and Guarantees">
+      <ul class="proof-list">
+        <li>Original Canvas Works</li>
+        <li>Custom Residential & Commercial Commissions</li>
+        <li>Local Pickup in Las Vegas & Nationwide Secure Shipping</li>
+      </ul>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section" aria-labelledby="gallery-heading">
+      <div class="section-header">
+        <h2 id="gallery-heading">Selected Originals & Archive</h2>
+        <p>Browse available fine art. Select any piece to instantly prefill an inquiry or reserve.</p>
+      </div>
+
+      <div class="gallery-grid">
+  <!-- Item 1: Painting -->
+  <article class="art-card" aria-labelledby="art-title-1">
+    <div class="image-wrapper">
+      <img 
+        src="assets/gallery/art-01.jpg" 
+        alt="Vibrant abstract expressionist painting of blooming yellow and coral wildflowers against cobalt blue stalks in a slim black frame" 
+        loading="lazy" 
+      />
+      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+    </div>
+    <div class="card-meta">
+      <h3 id="art-title-1">Wild Blossom Nocturne</h3>
+      <p class="specs">30" x 40" • Impasto Acrylic & Oil on Framed Canvas</p>
+      <div class="card-footer">
+        <span class="price"><span class="sr-only">Price: </span>$1,600</span>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Wild Blossom Nocturne')" aria-label="Inquire to purchase Wild Blossom Nocturne">Inquire to Purchase <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Item 2: Felted Bouquet -->
+  <article class="art-card" aria-labelledby="art-title-2">
+    <div class="image-wrapper">
+      <img 
+        src="assets/gallery/art-02.jpg" 
+        alt="Handcrafted felted wool floral arrangement in a glass vase featuring textured purple, ochre, and blue petals on a framing counter" 
+        loading="lazy" 
+      />
+      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+    </div>
+    <div class="card-meta">
+      <h3 id="art-title-2">Everlasting Flora Arrangement</h3>
+      <p class="specs">18" Height • Sculptural Wet-Felted Wool in Glass Vessel</p>
+      <div class="card-footer">
+        <span class="price"><span class="sr-only">Price: </span>$480</span>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Everlasting Flora Arrangement')" aria-label="Inquire to purchase Everlasting Flora Arrangement">Inquire to Purchase <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Item 3: Sculptural Felted Rose -->
+  <article class="art-card" aria-labelledby="art-title-3">
+    <div class="image-wrapper">
+      <img 
+        src="assets/gallery/art-03.jpg" 
+        alt="Close-up of a handmade felted wool rose sculpture with soft blended layers of periwinkle, olive, and lavender" 
+        loading="lazy" 
+      />
+      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+    </div>
+    <div class="card-meta">
+      <h3 id="art-title-3">Prismatic Felted Bloom</h3>
+      <p class="specs">6" Diameter • Botanical Wool Fiber Art Sculpture</p>
+      <div class="card-footer">
+        <span class="price"><span class="sr-only">Price: </span>$125</span>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Prismatic Felted Bloom')" aria-label="Inquire to purchase Prismatic Felted Bloom">Inquire to Purchase <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Item 4: Ceramic Feline Mask -->
+  <article class="art-card" aria-labelledby="art-title-4">
+    <div class="image-wrapper">
+      <img 
+        src="assets/gallery/art-04.jpg" 
+        alt="Textured ceramic wall sculpture of a snarling wildcat with mottled cobalt glaze, open jaws showing fangs, and cat-slit green eyes" 
+        loading="lazy" 
+      />
+      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+    </div>
+    <div class="card-meta">
+      <h3 id="art-title-4">Cerulean Beast Relief</h3>
+      <p class="specs">14" x 11" x 6" • Glazed Stoneware Ceramic Wall Sculpture</p>
+      <div class="card-footer">
+        <span class="price"><span class="sr-only">Price: </span>$750</span>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Cerulean Beast Relief')" aria-label="Inquire to purchase Cerulean Beast Relief">Inquire to Purchase <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </article>
+</div>
+    </section>
+
+    <!-- Commissions Process Section -->
+    <section id="commissions" class="section commissions-section" aria-labelledby="commissions-heading">
+      <div class="section-header">
+        <h2 id="commissions-heading">Custom Commissions</h2>
+        <p>Tailored artwork customized to match your room palette, scale, and personal narrative.</p>
+      </div>
+
+      <ol class="process-steps">
+        <li class="step-card">
+          <span class="step-num" aria-hidden="true">01</span>
+          <h3>Vision & Sizing</h3>
+          <p>Submit room dimensions, color swatches, or photos of your space. We'll clarify style direction and scale.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num" aria-hidden="true">02</span>
+          <h3>Palette & Mockup</h3>
+          <p>50% deposit secures your production slot. Digital concepts or color swatches are reviewed and approved.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num" aria-hidden="true">03</span>
+          <h3>Creation & Delivery</h3>
+          <p>In-progress checkpoints provided via video/photo. Completed work is sealed, signed, and shipped securely.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- About Section -->
+<div class="about-grid">
+  <img 
+    src="assets/artist-profile.jpg" 
+    alt="Artist Lindsey McConnell smiling in front of a dense backdrop of vibrant magenta blossoms" 
+    class="about-img" 
+    loading="lazy" 
+  />
+  <div class="about-text">
+    <h2 id="about-heading">Behind the Studio</h2>
+    <p>I create tactile, story-driven artwork across distinct mediums—ranging from expressive impasto canvas paintings to hand-sculpted wet-felted wool and high-fire ceramic sculptures.</p>
+    <p>Working out of Las Vegas, every piece explores tension, organic textures, and bold color palettes made to energize living and commercial spaces.</p>
+    <ul class="social-tags" aria-label="Social media and direct contact channels">
+      <li><a href="https://www.tiktok.com/@fullsignal_" target="_blank" rel="noopener noreferrer">TikTok <span class="sr-only">(opens in new tab)</span></a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram <span class="sr-only">(opens in new tab)</span></a></li>
+      <li><a href="mailto:lindsey@example.com">Email Direct</a></li>
+    </ul>
+  </div>
+</div>
+    </section>
+
+    <!-- High-Converting Accessible Contact Section -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="contact-card">
+        <div class="contact-header">
+          <h2 id="contact-heading">Start an Inquiry or Reserve a Piece</h2>
+          <p>Have questions about an available piece, or want to discuss a custom commission? Fill out the form below and I will respond within 24–48 hours.</p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" novalidate>
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="subject" value="New Fine Art Inquiry from Website" />
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" aria-hidden="true">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="e.g. Elena Vance" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="e.g. elena@example.com" aria-required="true" />
+            </div>
+          </div>
+
+          <div class="form-group">
+  <label for="inquiryType">Inquiry Purpose</label>
+  <select id="inquiryType" name="inquiryType">
+    <option value="Original Canvas Painting">Commission: Canvas Painting</option>
+    <option value="Sculptural Fiber / Wool Art">Commission: Sculptural Felted Wool</option>
+    <option value="Custom Ceramic Wall Sculpture">Commission: Ceramic Wall Sculpture</option>
+    <option value="Available Gallery Original">Purchase an Available Piece</option>
+    <option value="Interior Design / Trade Partnership">Interior Design / Trade Collaboration</option>
+  </select>
+</div>
+
+          <div class="form-group">
+            <label for="message">Details / Piece Name / Sizing <span class="required-mark" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Tell me which piece caught your eye or the wall dimensions you are working with..."></textarea>
+          </div>
+
+          <button type="submit" class="btn primary full-width">Send Art Inquiry</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Landmark -->
+  <footer role="contentinfo">
+    <p>© 2026 Lindsey McConnell • All artwork copyright of the artist. Las Vegas, NV.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
