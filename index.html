@@ -76,7 +76,7 @@
       </div>
 
       <div class="gallery-grid">
-  <!-- Item 1: Painting -->
+  <!-- Item 1: Available Original Painting -->
   <article class="art-card" aria-labelledby="art-title-1">
     <div class="image-wrapper">
       <img 
@@ -91,12 +91,12 @@
       <p class="specs">30" x 40" • Impasto Acrylic & Oil on Framed Canvas</p>
       <div class="card-footer">
         <span class="price"><span class="sr-only">Price: </span>$1,600</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Wild Blossom Nocturne')" aria-label="Inquire to purchase Wild Blossom Nocturne">Inquire to Purchase <span aria-hidden="true">→</span></a>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Wild Blossom Nocturne', 'Available Original Piece')" aria-label="Inquire to purchase Wild Blossom Nocturne">Inquire to Purchase <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </article>
 
-  <!-- Item 2: Felted Bouquet -->
+  <!-- Item 2: Archived Fiber Art Bouquet -->
   <article class="art-card" aria-labelledby="art-title-2">
     <div class="image-wrapper">
       <img 
@@ -104,19 +104,19 @@
         alt="Handcrafted felted wool floral arrangement in a glass vase featuring textured purple, ochre, and blue petals on a framing counter" 
         loading="lazy" 
       />
-      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+      <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
     </div>
     <div class="card-meta">
       <h3 id="art-title-2">Everlasting Flora Arrangement</h3>
       <p class="specs">18" Height • Sculptural Wet-Felted Wool in Glass Vessel</p>
       <div class="card-footer">
-        <span class="price"><span class="sr-only">Price: </span>$480</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Everlasting Flora Arrangement')" aria-label="Inquire to purchase Everlasting Flora Arrangement">Inquire to Purchase <span aria-hidden="true">→</span></a>
+        <span class="price">Archived</span>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Everlasting Flora Arrangement', 'Sculptural Fiber / Wool Art')" aria-label="Request a custom piece similar to Everlasting Flora Arrangement">Request Similar <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </article>
 
-  <!-- Item 3: Sculptural Felted Rose -->
+  <!-- Item 3: Archived Fiber Rose -->
   <article class="art-card" aria-labelledby="art-title-3">
     <div class="image-wrapper">
       <img 
@@ -124,19 +124,19 @@
         alt="Close-up of a handmade felted wool rose sculpture with soft blended layers of periwinkle, olive, and lavender" 
         loading="lazy" 
       />
-      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+      <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
     </div>
     <div class="card-meta">
       <h3 id="art-title-3">Prismatic Felted Bloom</h3>
       <p class="specs">6" Diameter • Botanical Wool Fiber Art Sculpture</p>
       <div class="card-footer">
-        <span class="price"><span class="sr-only">Price: </span>$125</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Prismatic Felted Bloom')" aria-label="Inquire to purchase Prismatic Felted Bloom">Inquire to Purchase <span aria-hidden="true">→</span></a>
+        <span class="price">Archived</span>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Prismatic Felted Bloom', 'Sculptural Fiber / Wool Art')" aria-label="Request a custom piece similar to Prismatic Felted Bloom">Request Similar <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </article>
 
-  <!-- Item 4: Ceramic Feline Mask -->
+  <!-- Item 4: Archived Ceramic Sculpture -->
   <article class="art-card" aria-labelledby="art-title-4">
     <div class="image-wrapper">
       <img 
@@ -144,14 +144,14 @@
         alt="Textured ceramic wall sculpture of a snarling wildcat with mottled cobalt glaze, open jaws showing fangs, and cat-slit green eyes" 
         loading="lazy" 
       />
-      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+      <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
     </div>
     <div class="card-meta">
       <h3 id="art-title-4">Cerulean Beast Relief</h3>
       <p class="specs">14" x 11" x 6" • Glazed Stoneware Ceramic Wall Sculpture</p>
       <div class="card-footer">
-        <span class="price"><span class="sr-only">Price: </span>$750</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Cerulean Beast Relief')" aria-label="Inquire to purchase Cerulean Beast Relief">Inquire to Purchase <span aria-hidden="true">→</span></a>
+        <span class="price">Archived</span>
+        <a href="#contact" class="link-cta" onclick="prefillInquiry('Cerulean Beast Relief', 'Custom Ceramic Wall Sculpture')" aria-label="Request a custom piece similar to Cerulean Beast Relief">Request Similar <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </article>
@@ -215,6 +215,7 @@
 
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" novalidate>
           <input type="hidden" name="access_key" value="b9babce4-b853-4fbb-8870-94f56645fbdb" />
+          <input type="hidden" name="redirect" value="https://lucylabsmedia.github.io/las-vegas-art-lady/#contact" />
           <input type="hidden" name="subject" value="New Fine Art Inquiry from Website" />
           <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" aria-hidden="true">
 
