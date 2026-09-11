@@ -1,263 +1,756 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lindsey McConnell | Las Vegas Fine Art & Original Contemporary Works</title>
-  <meta name="description" content="Original contemporary fine art, textured canvas pieces, and bespoke collector commissions by Las Vegas artist Lindsey McConnell." />
-  
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Lindsey McConnell | Las Vegas Fine Artist" />
-  <meta property="og:description" content="Original vibrant fine art, textured canvas pieces, and custom bespoke commissions." />
-  <meta property="og:image" content="assets/hero-featured.jpg" />
-  <meta property="og:type" content="website" />
+  <title>Crohn's Veteran | Empowering the Global IBD Community</title>
+  <meta name="description" content="An inclusive lifestyle platform, digital solution lab, and advocacy hub empowering individuals navigating Crohn's through lived experience, awareness gear, and modern web/AI technology." />
 
-  <!-- Preconnect & Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon / Browser Tab -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+  <!-- Google tag (gtag.js) - GA4 Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GM49NBWQT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0GM49NBWQT');
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#581c87',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- Accessible Skip Navigation -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- ADA Skip to Main Content Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-700 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-400">
+    Skip to main content
+  </a>
 
-  <!-- Header Landmark with Sticky Navigation -->
-  <header class="navbar" role="banner">
-    <a href="#" class="brand" aria-label="Lindsey McConnell - Return to home">LINDSEY McCONNELL</a>
-    <nav class="nav-links" aria-label="Main Navigation">
-      <ul>
-        <li><a href="#gallery">Collection</a></li>
-        <li><a href="#commissions">Commissions</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="btn-nav">Inquire / Book</a></li>
-      </ul>
-    </nav>
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200" role="banner">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg p-1" aria-label="Crohn's Veteran Home">
+        <img 
+          src="assets/images/header-logo.png?v=3" 
+          alt="Crohn's Veteran Logo" 
+          class="h-9 sm:h-10 w-auto object-contain transition duration-200 group-hover:scale-105"
+          onerror="this.src='assets/images/logo.png'"
+        />
+        <span class="font-black text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-700 via-purple-700 to-indigo-800">
+          Crohn's Veteran
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600" aria-label="Primary Navigation">
+        <a href="#about" class="hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded px-1 transition">About</a>
+        <a href="#tech-solutions" class="hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded px-1 transition">Tech & AI</a>
+        <a href="#gear" class="hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded px-1 transition">Store</a>
+        <a href="#how-it-works" class="hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded px-1 transition">Process</a>
+        <a href="#services" class="hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded px-1 transition">Services</a>
+        <a href="#faq" class="hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded px-1 transition">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#connect" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white transition shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600">
+          Get in Touch
+        </a>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Landmark -->
   <main id="main-content">
-    
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-content">
-        <p class="eyebrow">Las Vegas, NV • Contemporary Fine Art</p>
-        <h1 id="hero-heading">Original Art Rooted in Story, Color, and Atmosphere.</h1>
-        <p>Bringing spaces alive through bespoke canvas paintings, limited collections, and custom collector commissions.</p>
-        <div class="hero-actions">
-          <a href="#gallery" class="btn primary">View Latest Works</a>
-          <a href="#commissions" class="btn secondary">Commission a Piece</a>
+    <!-- 1: HERO -->
+    <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden bg-white border-b border-slate-200" aria-labelledby="hero-heading">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold uppercase tracking-wider mb-6">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5" aria-hidden="true"></i>
+          Official Advocacy & Media Solutions
+        </div>
+        <h1 id="hero-heading" class="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight sm:leading-none mb-6">
+          Resilience Beyond the Diagnosis. <br />
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-indigo-600">
+            Empowering the Global IBD Community.
+          </span>
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
+          Uniting lived advocacy with modern digital engineering. We build purposeful web applications, mobile tools, and AI solutions while funding community outreach through official awareness gear.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#gear" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md hover:shadow-brand-500/25 transition flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600">
+            <span>Shop Awareness Gear</span>
+            <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+          </a>
+          <a href="#tech-solutions" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400">
+            Explore Tech & Media Services
+          </a>
         </div>
       </div>
-      <div class="hero-media">
-  <img 
-    src="assets/hero-featured.jpg" 
-    alt="Portrait of Las Vegas artist Lindsey McConnell with violet hair wearing an evil eye necklace" 
-    loading="eager" 
-  />
-</div>
     </section>
 
-    <!-- Social Proof & Guarantees Bar -->
-    <section class="proof-bar" aria-label="Key Services and Guarantees">
-      <ul class="proof-list">
-        <li>Original Canvas Works</li>
-        <li>Custom Residential & Commercial Commissions</li>
-        <li>Local Pickup in Las Vegas & Nationwide Secure Shipping</li>
-      </ul>
+    <!-- 2: SOCIAL PROOF #1 -->
+    <section class="py-6 bg-slate-100/70 border-b border-slate-200" aria-label="Platform Highlights">
+      <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-slate-600 text-xs font-bold uppercase tracking-widest text-center">
+        <span class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-brand-600" aria-hidden="true"></i> Featured Top Crohn's Podcast</span>
+        <span class="flex items-center gap-2"><i data-lucide="code-2" class="w-4 h-4 text-brand-600" aria-hidden="true"></i> Modern App Development</span>
+        <span class="flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-brand-600" aria-hidden="true"></i> AI Workflow Solutions</span>
+        <span class="flex items-center gap-2"><i data-lucide="heart-handshake" class="w-4 h-4 text-brand-600" aria-hidden="true"></i> Global IBD Advocacy</span>
+      </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section gallery-section" aria-labelledby="gallery-heading">
-      <div class="section-header">
-        <h2 id="gallery-heading">Selected Originals & Archive</h2>
-        <p>Browse available fine art. Select any piece to instantly prefill an inquiry or reserve.</p>
-      </div>
-
-      <div class="gallery-grid">
-  <!-- Item 1: Available Original Painting -->
-  <article class="art-card" aria-labelledby="art-title-1">
-    <div class="image-wrapper">
-      <img 
-        src="assets/gallery/art-01.jpg" 
-        alt="Vibrant abstract expressionist painting of blooming yellow and coral wildflowers against cobalt blue stalks in a slim black frame" 
-        loading="lazy" 
-      />
-      <span class="badge available"><span class="sr-only">Status: </span>Available</span>
-    </div>
-    <div class="card-meta">
-      <h3 id="art-title-1">Wild Blossom Nocturne</h3>
-      <p class="specs">30" x 40" • Impasto Acrylic & Oil on Framed Canvas</p>
-      <div class="card-footer">
-        <span class="price"><span class="sr-only">Price: </span>$1,600</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Wild Blossom Nocturne', 'Available Original Piece')" aria-label="Inquire to purchase Wild Blossom Nocturne">Inquire to Purchase <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </article>
-
-  <!-- Item 2: Archived Fiber Art Bouquet -->
-  <article class="art-card" aria-labelledby="art-title-2">
-    <div class="image-wrapper">
-      <img 
-        src="assets/gallery/art-02.jpg" 
-        alt="Handcrafted felted wool floral arrangement in a glass vase featuring textured purple, ochre, and blue petals on a framing counter" 
-        loading="lazy" 
-      />
-      <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
-    </div>
-    <div class="card-meta">
-      <h3 id="art-title-2">Everlasting Flora Arrangement</h3>
-      <p class="specs">18" Height • Sculptural Wet-Felted Wool in Glass Vessel</p>
-      <div class="card-footer">
-        <span class="price">Archived</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Everlasting Flora Arrangement', 'Sculptural Fiber / Wool Art')" aria-label="Request a custom piece similar to Everlasting Flora Arrangement">Request Similar <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </article>
-
-  <!-- Item 3: Archived Fiber Rose -->
-  <article class="art-card" aria-labelledby="art-title-3">
-    <div class="image-wrapper">
-      <img 
-        src="assets/gallery/art-03.jpg" 
-        alt="Close-up of a handmade felted wool rose sculpture with soft blended layers of periwinkle, olive, and lavender" 
-        loading="lazy" 
-      />
-      <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
-    </div>
-    <div class="card-meta">
-      <h3 id="art-title-3">Prismatic Felted Bloom</h3>
-      <p class="specs">6" Diameter • Botanical Wool Fiber Art Sculpture</p>
-      <div class="card-footer">
-        <span class="price">Archived</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Prismatic Felted Bloom', 'Sculptural Fiber / Wool Art')" aria-label="Request a custom piece similar to Prismatic Felted Bloom">Request Similar <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </article>
-
-  <!-- Item 4: Archived Ceramic Sculpture -->
-  <article class="art-card" aria-labelledby="art-title-4">
-    <div class="image-wrapper">
-      <img 
-        src="assets/gallery/art-04.jpg" 
-        alt="Textured ceramic wall sculpture of a snarling wildcat with mottled cobalt glaze, open jaws showing fangs, and cat-slit green eyes" 
-        loading="lazy" 
-      />
-      <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
-    </div>
-    <div class="card-meta">
-      <h3 id="art-title-4">Cerulean Beast Relief</h3>
-      <p class="specs">14" x 11" x 6" • Glazed Stoneware Ceramic Wall Sculpture</p>
-      <div class="card-footer">
-        <span class="price">Archived</span>
-        <a href="#contact" class="link-cta" onclick="prefillInquiry('Cerulean Beast Relief', 'Custom Ceramic Wall Sculpture')" aria-label="Request a custom piece similar to Cerulean Beast Relief">Request Similar <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </article>
-</div>
-    </section>
-
-    <!-- Commissions Process Section -->
-    <section id="commissions" class="section commissions-section" aria-labelledby="commissions-heading">
-      <div class="section-header">
-        <h2 id="commissions-heading">Custom Commissions</h2>
-        <p>Tailored artwork customized to match your room palette, scale, and personal narrative.</p>
-      </div>
-
-      <ol class="process-steps">
-        <li class="step-card">
-          <span class="step-num" aria-hidden="true">01</span>
-          <h3>Vision & Sizing</h3>
-          <p>Submit room dimensions, color swatches, or photos of your space. We'll clarify style direction and scale.</p>
-        </li>
-        <li class="step-card">
-          <span class="step-num" aria-hidden="true">02</span>
-          <h3>Palette & Mockup</h3>
-          <p>50% deposit secures your production slot. Digital concepts or color swatches are reviewed and approved.</p>
-        </li>
-        <li class="step-card">
-          <span class="step-num" aria-hidden="true">03</span>
-          <h3>Creation & Delivery</h3>
-          <p>In-progress checkpoints provided via video/photo. Completed work is sealed, signed, and shipped securely.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- About Section -->
-<div class="about-grid">
-  <img 
-    src="assets/artist-profile.jpg" 
-    alt="Artist Lindsey McConnell smiling in front of a dense backdrop of vibrant magenta blossoms" 
-    class="about-img" 
-    loading="lazy" 
-  />
-  <div class="about-text">
-    <h2 id="about-heading">Behind the Studio</h2>
-    <p>I create tactile, story-driven artwork across distinct mediums—ranging from expressive impasto canvas paintings to hand-sculpted wet-felted wool and high-fire ceramic sculptures.</p>
-    <p>Working out of Las Vegas, every piece explores tension, organic textures, and bold color palettes made to energize living and commercial spaces.</p>
-    <ul class="social-tags" aria-label="Social media and direct contact channels">
-      <li><a href="https://www.tiktok.com/@fullsignal_" target="_blank" rel="noopener noreferrer">TikTok <span class="sr-only">(opens in new tab)</span></a></li>
-      <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram <span class="sr-only">(opens in new tab)</span></a></li>
-      <li><a href="mailto:lindsey@example.com">Email Direct</a></li>
-    </ul>
-  </div>
-</div>
-    </section>
-
-    <!-- High-Converting Accessible Contact Section -->
-    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
-      <div class="contact-card">
-        <div class="contact-header">
-          <h2 id="contact-heading">Start an Inquiry or Reserve a Piece</h2>
-          <p>Have questions about an available piece, or want to discuss a custom commission? Fill out the form below and I will respond within 24–48 hours.</p>
+    <!-- 3: PAIN POINT SECTION -->
+    <section class="py-16 md:py-20 bg-white border-b border-slate-200" aria-labelledby="challenges-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600">The Modern Challenge</span>
+          <h2 id="challenges-heading" class="text-3xl font-black text-slate-900 mt-1">Facing Battles Without the Right Digital Tools?</h2>
         </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-700 flex items-center justify-center mb-4 font-bold" aria-hidden="true">01</div>
+            <h3 class="font-bold text-slate-900 mb-2">Fragmented Tech Tools</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Living with chronic health needs requires tailored systems. Off-the-shelf software often ignores the unique workflow and accessibility realities of individuals managing chronic disease.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-700 flex items-center justify-center mb-4 font-bold" aria-hidden="true">02</div>
+            <h3 class="font-bold text-slate-900 mb-2">Isolation & Stigma</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Explaining flare-ups and day-to-day boundaries remains difficult. Advocates need strong digital presence, storytelling channels, and impactful branding to educate the world.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-700 flex items-center justify-center mb-4 font-bold" aria-hidden="true">03</div>
+            <h3 class="font-bold text-slate-900 mb-2">Complex AI Integration</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Many creators and health advocates want to harness artificial intelligence to streamline their projects or ventures, but lack reliable technical engineering to build it securely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" novalidate>
-          <input type="hidden" name="access_key" value="b9babce4-b853-4fbb-8870-94f56645fbdb" />
-          <input type="hidden" name="redirect" value="https://lucylabsmedia.github.io/las-vegas-art-lady/#contact" />
-          <input type="hidden" name="subject" value="New Fine Art Inquiry from Website" />
-          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" aria-hidden="true">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Your Name <span class="required-mark" aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" required autocomplete="name" placeholder="e.g. Elena Vance" aria-required="true" />
+    <!-- 4: VALUE PROP & FOUNDER SECTION -->
+    <section id="about" class="py-16 md:py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="about-heading">
+      <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600">Founder & Philosophy</span>
+          <h2 id="about-heading" class="text-3xl font-black text-slate-900 mt-2 mb-4 leading-snug">
+            Lived Experience Combined with Cloud & AI Engineering
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Crohn's Veteran was created to redefine what chronic illness recovery looks like. Founded by Air Force veteran and Cloud Engineer Jordan McConnell, our mission couples authentic community advocacy with modern software architecture.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Whether speaking on global panels, publishing media, or architecting digital solutions for advocates, we demonstrate that a chronic diagnosis never limits your capacity to build world-class products.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#tech-solutions" class="inline-flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+              Explore Technical Services <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Founder Profile Card with founder.jpg -->
+        <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm text-center sm:text-left flex flex-col sm:flex-row gap-6 items-center">
+          <img 
+            src="assets/images/founder.jpg" 
+            alt="Portrait of Jordan B. McConnell, founder of Crohn's Veteran" 
+            class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-brand-500 shadow-md shrink-0"
+          />
+          <div>
+            <div class="flex items-center gap-2 mb-1 justify-center sm:justify-start">
+              <h3 class="font-extrabold text-slate-950 text-lg">Jordan B. McConnell</h3>
+              <span class="px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 text-[10px] font-bold">Founder</span>
             </div>
-            <div class="form-group">
-              <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" required autocomplete="email" placeholder="e.g. elena@example.com" aria-required="true" />
+            <p class="text-xs font-semibold text-brand-600 mb-3">Cloud Engineer • Veteran • Podcaster</p>
+            <p class="text-xs text-slate-600 italic leading-relaxed">
+              "Building systems that give people clarity, independence, and pride—no matter what health battle they are fighting."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5: PAID MEDIA & TECH SOLUTIONS -->
+    <section id="tech-solutions" class="py-16 md:py-24 bg-white border-b border-slate-200" aria-labelledby="tech-heading">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Digital Innovation Lab</span>
+          <h2 id="tech-heading" class="text-3xl font-black text-slate-900 mt-1">Paid Media & Technology Solutions</h2>
+          <p class="text-slate-600 text-sm mt-3">
+            Empowering advocates, wellness creators, and businesses impacted by chronic conditions with high-performance software engineering and AI automation.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center mb-4" aria-hidden="true">
+                <i data-lucide="layout" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">Modern Websites & Landing Pages</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Fast, responsive, accessible websites optimized for conversion, SEO, e-commerce integration, and community engagement.
+              </p>
+            </div>
+            <a href="#connect" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+              <span>Inquire Architecture</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center mb-4" aria-hidden="true">
+                <i data-lucide="smartphone" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">Mobile Application Development</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Native Android & cross-platform apps built with modern frameworks (Jetpack Compose, Kotlin) tailored for health routines and user education.
+              </p>
+            </div>
+            <a href="#connect" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+              <span>Request Mobile Scope</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center mb-4" aria-hidden="true">
+                <i data-lucide="bot" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">AI Tools & Workflow Automations</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Custom LLM integrations, content generation pipelines, intelligent intake bots, and prompt systems that save time and reduce manual toil.
+              </p>
+            </div>
+            <a href="#connect" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+              <span>Consult AI Solutions</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center mb-4" aria-hidden="true">
+                <i data-lucide="cloud-cog" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">Cloud Architecture & FinOps</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Robust hosting blueprints, GitHub Actions CI/CD automation, scalable cloud setups, and cloud spend optimization.
+              </p>
+            </div>
+            <a href="#connect" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+              <span>Get Cloud Plan</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6: SERVICES / ENGAGEMENT -->
+    <section id="services" class="py-16 md:py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="services-heading">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Collaborations & Appearances</span>
+          <h2 id="services-heading" class="text-3xl font-black text-slate-900 mt-1">Speaking & Media Services</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-400 transition">
+            <div>
+              <span class="text-xs font-bold text-brand-600 uppercase tracking-wide">Keynotes & Panels</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Speaking & Guest Appearances</h3>
+              <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                Healthcare conferences, corporate wellness presentations, patient summit panels, and veteran disability awareness discussions.
+              </p>
+            </div>
+            <a href="#connect" class="w-full text-center py-2.5 rounded-lg bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 text-xs font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+              Book Speaking
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-400 transition">
+            <div>
+              <span class="text-xs font-bold text-brand-600 uppercase tracking-wide">Partnerships & Press</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Business & Media Requests</h3>
+              <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                Guest podcast appearances, healthcare panel interviews, brand collaborations, and cross-platform awareness campaigns.
+              </p>
+            </div>
+            <a href="#connect" class="w-full text-center py-2.5 rounded-lg bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 text-xs font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+              Submit Media Inquiry
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7: SOCIAL PROOF / PODCAST REVIEW SECTION (FEEDSPOT RECOGNITION) -->
+    <section class="py-16 bg-purple-950 text-white" aria-labelledby="podcast-recognition-heading">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-800/80 border border-purple-600 text-amber-300 text-xs font-bold uppercase tracking-wider mb-6">
+          <i data-lucide="trophy" class="w-4 h-4 text-amber-400" aria-hidden="true"></i>
+          Recognized as a Top Crohn's Disease Podcast
+        </div>
+
+        <div class="flex justify-center gap-1 text-amber-400 mb-4" aria-hidden="true">
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+        </div>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+
+        <h2 id="podcast-recognition-heading" class="text-xl sm:text-2xl font-bold tracking-tight text-white mb-2">
+          Crohn's Veteran Podcast
+        </h2>
+        <p class="text-sm font-extrabold uppercase tracking-widest text-purple-200">
+          Hosted by Jordan McConnell
+        </p>
+
+        <div class="mt-6 pt-6 border-t border-purple-800/60 max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-purple-200">
+          <span>Featured among the industry's best IBD podcasts:</span>
+          <a 
+            href="https://podcast.feedspot.com/crohns_disease_podcasts/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-1.5 font-bold text-amber-300 hover:text-amber-200 underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded p-0.5"
+          >
+            <span>View Feedspot Top Rankings</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5" aria-hidden="true"></i>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8: HOW IT WORKS -->
+    <section id="how-it-works" class="py-16 md:py-20 bg-white border-b border-slate-200" aria-labelledby="roadmap-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Clear Collaboration</span>
+          <h2 id="roadmap-heading" class="text-3xl font-black text-slate-900 mt-1">How We Collaborate</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-lg flex items-center justify-center mx-auto mb-4 shadow-sm" aria-hidden="true">
+              1
+            </div>
+            <h3 class="font-bold text-slate-900 mb-2">Scope & Vision</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Reach out via the form with your concept—whether you need a custom app, an AI pipeline, or a keynote speaker.
+            </p>
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-lg flex items-center justify-center mx-auto mb-4 shadow-sm" aria-hidden="true">
+              2
+            </div>
+            <h3 class="font-bold text-slate-900 mb-2">Execution & Build</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              We architect the software, establish clean integrations, or finalize event preparations with clear timelines.
+            </p>
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-lg flex items-center justify-center mx-auto mb-4 shadow-sm" aria-hidden="true">
+              3
+            </div>
+            <h3 class="font-bold text-slate-900 mb-2">Launch & Inspire</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Deploy your technology or deliver impactful media that strengthens your brand and supports the Crohn's community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9: PRODUCT CATALOG (AWARENESS MERCH) -->
+    <section id="gear" class="py-16 md:py-24 bg-slate-50 border-b border-slate-200" aria-labelledby="store-heading">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Awareness Apparel & Merch</span>
+          <h2 id="store-heading" class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Wear Your Purple Support</h2>
+          <p class="text-slate-600 text-sm mt-3">
+            Every item purchased directly funds awareness initiatives, podcasts, and digital health advocacy.
+          </p>
+        </div>
+
+        <div id="printful-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" aria-live="polite">
+          <div class="col-span-full text-center py-10">
+            <div class="inline-block w-8 h-8 border-4 border-brand-500 border-t-transparent rounded-full animate-spin" role="status">
+              <span class="sr-only">Loading gear catalog...</span>
+            </div>
+            <p class="text-slate-500 text-xs mt-3">Loading gear catalog...</p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="https://crohnsveteranstore.printful.me/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white text-xs font-bold shadow-md transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-950">
+            <span>View All Items on Official Quick Store</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10: FAQ SECTION -->
+    <section id="faq" class="py-16 md:py-20 bg-white border-b border-slate-200" aria-labelledby="faq-heading">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Clear Answers</span>
+          <h2 id="faq-heading" class="text-3xl font-black text-slate-900 mt-1">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-4" id="faq-accordion">
+          
+          <!-- FAQ 1 -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
+            <button 
+              type="button"
+              class="w-full px-6 py-4 text-left font-bold text-sm text-slate-900 flex justify-between items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500" 
+              onclick="toggleFaq(1)"
+              id="faq-btn-1"
+              aria-expanded="false"
+              aria-controls="faq-content-1"
+            >
+              <span>How do I reach Jordan for web, mobile, or AI solution development?</span>
+              <i data-lucide="chevron-down" id="faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform" aria-hidden="true"></i>
+            </button>
+            <div id="faq-content-1" role="region" aria-labelledby="faq-btn-1" class="hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Use the contact form below and select <strong>"Custom Web & App Development"</strong> or <strong>"AI Tools & Workflows"</strong>. Please provide a high-level overview of your timeline, objectives, and tech stack. Jordan reviews technical scopes directly and will follow up with initial scheduling within 24–48 hours.
             </div>
           </div>
 
-          <div class="form-group">
-  <label for="inquiryType">Inquiry Purpose</label>
-  <select id="inquiryType" name="inquiryType">
-    <option value="Original Canvas Painting">Commission: Canvas Painting</option>
-    <option value="Sculptural Fiber / Wool Art">Commission: Sculptural Felted Wool</option>
-    <option value="Custom Ceramic Wall Sculpture">Commission: Ceramic Wall Sculpture</option>
-    <option value="Available Gallery Original">Purchase an Available Piece</option>
-    <option value="Interior Design / Trade Partnership">Interior Design / Trade Collaboration</option>
-  </select>
-</div>
-
-          <div class="form-group">
-            <label for="message">Details / Piece Name / Sizing <span class="required-mark" aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Tell me which piece caught your eye or the wall dimensions you are working with..."></textarea>
+          <!-- FAQ 2 -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
+            <button 
+              type="button"
+              class="w-full px-6 py-4 text-left font-bold text-sm text-slate-900 flex justify-between items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500" 
+              onclick="toggleFaq(2)"
+              id="faq-btn-2"
+              aria-expanded="false"
+              aria-controls="faq-content-2"
+            >
+              <span>How does purchasing and checkout work for awareness gear?</span>
+              <i data-lucide="chevron-down" id="faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform" aria-hidden="true"></i>
+            </button>
+            <div id="faq-content-2" role="region" aria-labelledby="faq-btn-2" class="hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Clicking "Buy Now" on any item opens our hosted Printful Quick Store (`crohnsveteranstore.printful.me`), where you can pick your size, select color variations, and check out securely via Stripe with global door-to-door tracking.
+            </div>
           </div>
 
-          <button type="submit" class="btn primary full-width">Send Art Inquiry</button>
+          <!-- FAQ 3 -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
+            <button 
+              type="button"
+              class="w-full px-6 py-4 text-left font-bold text-sm text-slate-900 flex justify-between items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500" 
+              onclick="toggleFaq(3)"
+              id="faq-btn-3"
+              aria-expanded="false"
+              aria-controls="faq-content-3"
+            >
+              <span>Can Jordan speak on podcast episodes, webinars, or keynotes?</span>
+              <i data-lucide="chevron-down" id="faq-icon-3" class="w-4 h-4 text-slate-500 transition-transform" aria-hidden="true"></i>
+            </button>
+            <div id="faq-content-3" role="region" aria-labelledby="faq-btn-3" class="hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Yes. Jordan speaks frequently on navigating chronic autoimmune challenges in corporate tech environments, veteran transitions, and harnessing software tools to maintain health boundaries.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
+            <button 
+              type="button"
+              class="w-full px-6 py-4 text-left font-bold text-sm text-slate-900 flex justify-between items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500" 
+              onclick="toggleFaq(4)"
+              id="faq-btn-4"
+              aria-expanded="false"
+              aria-controls="faq-content-4"
+            >
+              <span>Is Crohn's Veteran only for military veterans?</span>
+              <i data-lucide="chevron-down" id="faq-icon-4" class="w-4 h-4 text-slate-500 transition-transform" aria-hidden="true"></i>
+            </button>
+            <div id="faq-content-4" role="region" aria-labelledby="faq-btn-4" class="hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Not at all. While founded by an Air Force veteran, Crohn's Veteran is an inclusive lifestyle, media, and development platform dedicated to supporting anyone navigating Crohn's, Colitis, or autoimmune GI disorders worldwide.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 11: CLOSING CTA & ACCESSIBLE CONTACT FORM -->
+    <section id="connect" class="py-16 md:py-24 bg-slate-900 text-white" aria-labelledby="contact-heading">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Direct Collaboration</span>
+          <h2 id="contact-heading" class="text-3xl sm:text-4xl font-black mt-1 mb-3">Let's Build or Collaborate</h2>
+          <p class="text-slate-400 text-xs sm:text-sm">
+            Reach out for custom software, mobile app development, speaking engagements, or media appearances.
+          </p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 bg-slate-800/80 p-6 sm:p-8 rounded-2xl border border-slate-700 shadow-xl">
+          <input type="hidden" name="access_key" value="a0c1a91d-c51a-484e-86ff-059e7ecb7775" />
+          <input type="hidden" name="subject" value="New Inquiry - Crohn's Veteran Platform" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off" />
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="form-name" class="block text-xs font-semibold text-slate-300 mb-1">Name <span class="text-brand-400" aria-hidden="true">*</span></label>
+              <input type="text" id="form-name" name="name" required class="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="form-email" class="block text-xs font-semibold text-slate-300 mb-1">Email <span class="text-brand-400" aria-hidden="true">*</span></label>
+              <input type="email" id="form-email" name="email" required class="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition" placeholder="name@example.com" />
+            </div>
+          </div>
+
+          <div>
+            <label for="form-inquiry" class="block text-xs font-semibold text-slate-300 mb-1">Inquiry Type</label>
+            <select id="form-inquiry" name="inquiry_type" class="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition">
+              <option value="Custom Web & App Development">Custom Web & App Development</option>
+              <option value="AI Tools & Workflows">AI Tools & Workflows</option>
+              <option value="Speaking & Panels">Keynote & Panel Speaking</option>
+              <option value="Business & Media">Business & Media Requests</option>
+              <option value="General Support">General Community & Support</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="form-message" class="block text-xs font-semibold text-slate-300 mb-1">Project Details / Message <span class="text-brand-400" aria-hidden="true">*</span></label>
+            <textarea id="form-message" name="message" rows="4" required class="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition" placeholder="Tell us about your project, timeline, or collaboration idea..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-500">
+            <span>Submit Message</span>
+            <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
+          </button>
         </form>
       </div>
     </section>
-
   </main>
 
-  <!-- Footer Landmark -->
-  <footer role="contentinfo">
-    <p>© 2026 Lindsey McConnell • All artwork copyright of the artist. Las Vegas, NV.</p>
+  <!-- Footer -->
+  <footer class="py-8 bg-slate-950 text-slate-400 text-xs border-t border-slate-800 text-center" role="contentinfo">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Crohn's Veteran. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://crohnsveteranstore.printful.me/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded p-1 transition">
+          <span>Store</span>
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+        <a href="#about" class="hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded p-1 transition">About</a>
+        <a href="#tech-solutions" class="hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded p-1 transition">Tech Solutions</a>
+        <a href="#faq" class="hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded p-1 transition">FAQ</a>
+        <a href="#connect" class="hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded p-1 transition">Contact</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Scripts -->
+  <script>
+    // Accessible FAQ Accordion Toggle
+    function toggleFaq(index) {
+      const content = document.getElementById(`faq-content-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      const btn = document.getElementById(`faq-btn-${index}`);
+      
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !isExpanded);
+
+      if (isExpanded) {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      } else {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Dynamic Product Loader
+    async function loadPrintfulProducts() {
+      const grid = document.getElementById('printful-product-grid');
+      const STORE_URL = 'https://crohnsveteranstore.printful.me/';
+
+      const DEFAULT_PRODUCTS = [
+        {
+          id: "eco-tote-bag",
+          name: "Crohn's Veteran Gray Eco Tote Bag",
+          price: "From $28.50",
+          variants: 1,
+          thumbnail: "https://files.cdn.printful.com/files/703/703213ec974ce24d1668e1e792f39be9_preview.png",
+          url: STORE_URL
+        },
+        {
+          id: "stainless-steel-bottle",
+          name: "Crohn's Veteran Gray Stainless Steel Water Bottle",
+          price: "From $30.88",
+          variants: 1,
+          thumbnail: "https://files.cdn.printful.com/files/647/647b0a7cb54e951d6db0f9bb1682701f_preview.png",
+          url: STORE_URL
+        },
+        {
+          id: "silver-dad-hat",
+          name: "Crohn's Veteran Silver Dad Hat",
+          price: "From $22.88",
+          variants: 3,
+          thumbnail: "https://files.cdn.printful.com/files/94f/94f923e2dc9dcaea887a0da4e5d4cb0f_preview.png",
+          url: STORE_URL
+        },
+        {
+          id: "unisex-joggers",
+          name: "Crohn's Veteran Gray Unisex Joggers",
+          price: "From $30.88",
+          variants: 5,
+          thumbnail: "https://files.cdn.printful.com/files/fa8/fa8bf547d21cbbd25c4ef64a85669b91_preview.png",
+          url: STORE_URL
+        },
+        {
+          id: "purple-womens-slides",
+          name: "Crohn's Veteran Purple Women's Slides",
+          price: "From $42.88",
+          variants: 6,
+          thumbnail: "https://files.cdn.printful.com/files/578/57876a3e5c7075c3db77fa33dcb2858b_preview.png",
+          url: STORE_URL
+        },
+        {
+          id: "gray-unisex-hoodie",
+          name: "Crohn's Veteran Gray Unisex Hoodie",
+          price: "From $28.88",
+          variants: 8,
+          thumbnail: "https://files.cdn.printful.com/files/f13/f134547aa521a007328bfb0ecfa31c3b_preview.png",
+          url: STORE_URL
+        },
+        {
+          id: "white-glossy-mug",
+          name: "Crohn's Veteran Purple Glossy Mug",
+          price: "From $9.99",
+          variants: 2,
+          thumbnail: "https://files.cdn.printful.com/files/84a/84ae26ef89df89bc7e8d35687d0ec2e9_preview.png",
+          url: STORE_URL
+        },
+        {
+          id: "black-mens-slides",
+          name: "Crohn's Veteran Black Men's Slides",
+          price: "From $42.99",
+          variants: 6,
+          thumbnail: "https://files.cdn.printful.com/files/d6e/d6ea928b584a7e3c155d8f615371c1b1_preview.png",
+          url: STORE_URL
+        }
+      ];
+
+      let products = DEFAULT_PRODUCTS;
+
+      try {
+        const res = await fetch('products.json?v=' + Date.now());
+        if (res.ok) {
+          const loaded = await res.json();
+          if (Array.isArray(loaded) && loaded.length > 0) {
+            products = loaded;
+          }
+        }
+      } catch (e) {
+        console.warn('Falling back to built-in store catalog:', e);
+      }
+
+      grid.innerHTML = products.map(product => {
+        const directUrl = product.url || product.external_url || STORE_URL;
+        return `
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-500 hover:shadow-md transition">
+            <div>
+              <div class="h-48 rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center mb-4 border border-slate-100">
+                <img src="${product.thumbnail || 'assets/images/logo.png'}" alt="${product.name}" class="w-full h-full object-contain p-2 hover:scale-105 transition duration-300" onerror="this.src='assets/images/logo.png'" />
+              </div>
+              <h4 class="font-bold text-sm text-slate-900 line-clamp-2">${product.name}</h4>
+              <p class="text-xs text-slate-600 mt-1">${product.price ? product.price + ' • ' : ''}${product.variants || 1} available styles</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between">
+              <span class="text-xs text-brand-700 font-semibold">100% Charity</span>
+              <a href="${directUrl}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition shadow-sm inline-flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600">
+                <span>Buy Now</span>
+                <i data-lucide="external-link" class="w-3 h-3" aria-hidden="true"></i>
+                <span class="sr-only">(opens product on Printful store)</span>
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // GA4 Custom Event Tracking
+    function initAnalyticsEvents() {
+      // 1. Track Outbound Store & "Buy Now" Clicks
+      document.addEventListener('click', (e) => {
+        const targetLink = e.target.closest('a');
+        if (!targetLink) return;
+
+        const href = targetLink.getAttribute('href') || '';
+        if (href.includes('crohnsveteranstore.printful.me')) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'begin_checkout', {
+              event_category: 'ecommerce',
+              event_label: 'Printful Store Navigation',
+              destination: href
+            });
+          }
+        }
+      });
+
+      // 2. Track Form Submissions
+      const contactForm = document.querySelector('form[action*="web3forms"]');
+      if (contactForm) {
+        contactForm.addEventListener('submit', () => {
+          const inquiryType = document.getElementById('form-inquiry')?.value || 'General';
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              event_category: 'engagement',
+              event_label: inquiryType
+            });
+          }
+        });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      loadPrintfulProducts();
+      initAnalyticsEvents();
+    });
+  </script>
 </body>
 </html>
