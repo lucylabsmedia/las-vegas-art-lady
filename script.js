@@ -1,4 +1,46 @@
-/**
+// Check and manage Cookie Consent banner
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('btn-accept-cookies');
+  const declineBtn = document.getElementById('btn-decline-cookies');
+
+  const consentStatus = localStorage.getItem('consent_status');
+
+  // Display banner only if choice has not been made yet
+  if (!consentStatus && banner) {
+    banner.classList.remove('hidden');
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('consent_status', 'granted');
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+      banner.classList.add('hidden');
+    });
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('consent_status', 'denied');
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        });
+      }
+      banner.classList.add('hidden');
+    });
+  }
+});/**
  * Handles prefilling for both available sales and commission requests on archived works.
  */
 function prefillInquiry(pieceTitle, inquiryType = 'Available Original Piece') {
