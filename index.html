@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1MWXMB71H"></script>
+  <!-- Google Consent Mode v2 (Default: Denied prior to user opt-in) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
+    // Check stored choice
+    const savedConsent = localStorage.getItem('consent_status');
+
+    if (savedConsent === 'granted') {
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    } else {
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+    }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1MWXMB71H"></script>
+  <script>
+    gtag('js', new Date());
     gtag('config', 'G-Y1MWXMB71H');
   </script>
 
@@ -271,6 +293,17 @@
   <footer role="contentinfo">
     <p>© 2026 Lindsey McConnell • All artwork copyright of the artist. Las Vegas, NV.</p>
   </footer>
+
+  <!-- GDPR / ePrivacy Cookie Consent Banner -->
+  <aside id="cookie-banner" class="cookie-banner hidden" role="region" aria-label="Cookie and Privacy Consent">
+    <div class="cookie-content">
+      <p>We use cookies to analyze website traffic and improve your browsing experience. Choose whether to allow analytics cookies.</p>
+      <div class="cookie-actions">
+        <button id="btn-decline-cookies" type="button" class="btn cookie-btn secondary">Decline</button>
+        <button id="btn-accept-cookies" type="button" class="btn cookie-btn primary">Accept</button>
+      </div>
+    </div>
+  </aside>
 
   <script src="script.js"></script>
 </body>
